@@ -1,0 +1,11 @@
+# Vim temp files
+*~
+*.swp
+.netrwhist
+
+# bundle files
+bundle/vundle/*
+bundle/*
+
+# viewfiles
+view/*
