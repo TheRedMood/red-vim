@@ -5,6 +5,28 @@ filetype plugin indent on
 
 set nocompatible		" be improved
 
+" Mod line
+set modeline
+
+" Statusline {{{
+    " Needed for drawing the statusline
+    set laststatus=2
+
+    "set statusline=%<\ %{mode()}\ \|\ %F%=\ %{&fileformat}\ \|\ %{&fileencoding}\ \|\ (%l,%c)\ \|\ %p%% 
+    set statusline=
+    set statusline+=%<
+    set statusline+=\ %t "Tail fo the filename
+    set statusline+=\ %y "Mode
+    set statusline+=\ [%{&fileformat}, "File format
+    set statusline+=\ %{strlen(&fenc)?&fenc:'none'}] "File encoding
+
+    set statusline+=%= "Mid separator
+
+    set statusline+=\ %c, " cursor column
+    set statusline+=%l/%L
+    set statusline+=\ %p%%
+" }}}
+
 " Mapping leader 
 let mapleader = " "
 
@@ -12,8 +34,6 @@ let mapleader = " "
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_gb
 
-" Mod line
-set modeline
 
 " Tabs
 set tabstop=4
