@@ -4,8 +4,6 @@
 .netrwhist
 
 # bundle files
-bundle/vundle/*
-bundle/*
 
 # viewfiles
 view/*

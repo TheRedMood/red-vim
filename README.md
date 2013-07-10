@@ -8,14 +8,20 @@ editor and the configuratio language it uses.
 SETUP
 -----
 
+This is for downloading and setting up the repository:
+
 ```Shell
 git clone https://github.com/TheRedMood/red-vim.git ~/.vim
-ln -s ~/.vim/vimrc ~/.vimrc
+cd ~/.vim
+git submodule init
+git submodule update
 ```
 
-VUNDLE
----
-I will write more here later. Look at the "Vundler.vim" file in the .vim dir.
+Then create the symlinks:
+
+```Shell
+ln -s ~/.vim/vimrc ~/.vimrc
+```
 
 Thanks
 ---

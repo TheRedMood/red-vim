@@ -1,5 +1,9 @@
+" Pathogen!
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 set nocompatible		" be improved
-filetype off			" required
 
 " Mapping leader 
 let mapleader = " "
