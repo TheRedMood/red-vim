@@ -1,31 +1,37 @@
-" Pathogen!
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+" Pathogen -v-
+  execute pathogen#infect()
+  syntax on
+  filetype plugin indent on
+" -^-
 
-set nocompatible		" be improved
+set nocompatible " be improved
 
 " Mod line
 set modeline
 
-" Statusline {{{
-    " Needed for drawing the statusline
-    set laststatus=2
+" Statusline -v-
+" Needed for drawing the statusline
+set laststatus=2
 
-    "set statusline=%<\ %{mode()}\ \|\ %F%=\ %{&fileformat}\ \|\ %{&fileencoding}\ \|\ (%l,%c)\ \|\ %p%% 
-    set statusline=
-    set statusline+=%<
-    set statusline+=\ %t "Tail fo the filename
-    set statusline+=\ %y "Mode
-    set statusline+=\ [%{&fileformat}, "File format
-    set statusline+=\ %{strlen(&fenc)?&fenc:'none'}] "File encoding
+"set statusline=%<\ %{mode()}\ \|\ %F%=\ %{&fileformat}\ \|\ %{&fileencoding}\ \|\ (%l,%c)\ \|\ %p%% 
+set statusline=
+set statusline+=%<
+set statusline+=\ %t "Tail fo the filename
+set statusline+=\ %y "Mode
+set statusline+=\ [%{&fileformat}, "File format
+set statusline+=\ %{strlen(&fenc)?&fenc:'none'}] "File encoding
 
-    set statusline+=%= "Mid separator
+set statusline+=%= "Mid separator
 
-    set statusline+=\ %c, " cursor column
-    set statusline+=%l/%L
-    set statusline+=\ %p%%
-" }}}
+set statusline+=\ %c, " cursor column
+set statusline+=%l/%L
+set statusline+=\ %p%%
+" -^-
+
+" Folds
+set foldmethod=marker
+set foldmarker=-v-,-^-
+
 
 " Mapping leader 
 let mapleader = " "
@@ -35,6 +41,9 @@ nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_gb
 
 
+" Encoding
+set encoding=utf-8
+
 " Tabs
 set tabstop=4
 set shiftwidth=4
@@ -43,27 +52,23 @@ set expandtab
 " Autoindent
 set autoindent
 
-" Looks
-set background=light " you can use `dark` or `light` as your background
+" Looks -v-
+set background=dark
+colorscheme desert
+
 syntax enable
 set nu
-set colorcolumn=80
+" -^-
 
 " backspaces
 set backspace=indent,eol,start
 
 " Folds
 set foldmethod=marker
+
 " save and restore folds
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
-
-" NERDtree stuff
-map <F4> :NERDTreeToggle<cr>
-
-" ColorChooser stuff
-map <silent><F3> :NEXTCOLOR<cr> 
-map <silent><F2> :PREVCOLOR<cr>
+"au BufWinLeave * mkview
+"au BufWinEnter * silent loadview
 
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
@@ -72,17 +77,11 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set backupdir=~/.vim/tmpfiles,.
 set directory=~/.vim/tmpfiles,.
 
-" Setting up Tags list settings
-nnoremap <silent> <F8> :TlistToggle<CR>
-
 " Templates
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/tmpl.%:e
 
 " Thanks Ferus. <3
 cmap w!! w !sudo tee >/dev/null %
-
-" Make pasting disabled when leaving insert mode
-au InsertLeave * set nopaste
 
 " The smash escape?
 inoremap jj <Esc>
@@ -97,8 +96,6 @@ nnoremap j gj
 nnoremap k gk
 
 " Making searching and other general improvements.
-"#nnoremap / /\v
-"vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
@@ -124,3 +121,13 @@ map ø [
 map æ ]
 map Ø {
 map Æ }
+
+" Vimrc specific -v-
+" Auto reload
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+" Easier acess .vimrc
+nmap <leader>v :tabedit $MYVIMRC<CR>
+" -^-
