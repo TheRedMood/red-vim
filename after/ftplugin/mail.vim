@@ -52,15 +52,15 @@ nnoremap <buffer><leader>mu 1G}OPriority: urgent<ESC>
 
 " Formatting the current paragraph according to the current 'textwidth'
 " with ^J (control-j)
-imap <C-J> <c-o>gqap
-map <C-J> gqap
-vmap <C-J> gq
+imap <buffer><C-J> <c-o>gqap
+map <buffer><C-J> gqap
+vmap <buffer><C-J> gq
 
 " Hellos and greetings.
-map ;: 1G}oGreetings.<CR><ESC>
-map ;; G/^\* /e+1<CR>ye1G}oGreetings, <c-r>"!<cr><ESC>
-map ,he 1G}oHello,<CR><ESC>
-map ,He G/^\* /e+1<CR>ye1G}oHello, !<ESC>Po<ESC>
+map <buffer>;: 1G}oGreetings.<CR><ESC>
+map <buffer>;; G/^\* /e+1<CR>ye1G}oGreetings, <c-r>"!<cr><ESC>
+map <buffer>,he 1G}oHello,<CR><ESC>
+map <buffer>,He G/^\* /e+1<CR>ye1G}oHello, !<ESC>Po<ESC>
 
 nnoremap <buffer>Q gq
 vnoremap <buffer>Q gq

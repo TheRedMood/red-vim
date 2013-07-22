@@ -3,7 +3,11 @@
 *.swp
 .netrwhist
 
-# bundle files
-
 # viewfiles
 view/*
+
+# viminfo
+.viminfo
+
+# Tags
+*tags

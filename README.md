@@ -26,7 +26,13 @@ Then create the symlinks:
 -	[tabular](https://github.com/godlygeek/tabular)
 -	[presenting.vim](https://github.com/sotte/presenting.vim)
 -	[vim-gnupg](https://github.com/jamessan/vim-gnupg)
-
+-   [vim-git-log](https://github.com/kablamo/vim-git-log.git)
+-   [vim-unimparied](https://github.com/tpope/vim-unimpaired.git)
+-   [ctrlp.vim](https://github.com/kien/ctrlp.vim.git)
+-   [vim-markdown](https://github.com/tpope/vim-markdown.git)
+-   [vim-markdown-folding](https://github.com/nelstrom/vim-markdown-folding.git)
+-   [xterm-color-table.vim](https://github.com/guns/xterm-color-table.vim.git)
+-   [ag.vim](https://github.com/rking/ag.vim.git)
 ### Thanks
 -	[n2o4](https://github.com/n2o4)
 -	[harski](https://github.com/harski)
