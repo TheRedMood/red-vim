@@ -114,4 +114,10 @@ let g:html_use_xhtml = 1                    " Generate xhtml files
 let g:html_prevent_copy = "fn"              " Make the fold column and line numbers uncopiable
 let g:html_number_lines = 1                 " Enable line numbers is output
 " -^-1
+" Fix arrow keys -v-1
+map <ESC>oA <Up>
+map <ESC>oB <Down>
+map <ESC>oC <Right>
+map <ESC>oD <Left>
+" -^-1
 " vim: set fmr=-v-,-^- fdm=marker cms="%s" et ts=2 sw=2 sts=2 :
