@@ -2,7 +2,7 @@
 " -v-1 Keybinds
 " -v-2 Leader key settings
 let mapleader = "\<space>"
-
+let localleader = "\\"
 " -v-2 Personal mappings
 " Use double-space to enter command-line
 " http://vimbits.com/bits/444
@@ -25,6 +25,9 @@ nmap <leader>l :setlocal list!<cr>
 
 " Stop cycling when you can fly
 nnoremap <leader>ls :ls<CR>:b<space>
+
+" Strip trailing whitespace
+noremap <leader>ts :%s/\s\+$//eg<CR>
 
 " I know when to ask for help, thank you very much.
 noremap  <F1> <esc>
@@ -49,6 +52,7 @@ nnoremap <leader>ve <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>vs :source $MYVIMRC<cr>
 
 nnoremap Y y$
+
 
 " -v-2 Window management mappings
 " Make window control quicker
@@ -121,6 +125,16 @@ nnoremap <leader>cl :clast<cr>
 nnoremap <leader>CC :cclose<cr>
 nnoremap <leader>ce :cex[]<cr>
 
+" -v-2 Location-bindings
+nnoremap <leader>lo :lopen<cr>
+nnoremap <leader>lc :lopen<cr>
+nnoremap <leader>lw :lwindow<cr>
+nnoremap <leader>lp :lprev<cr>
+nnoremap <leader>ln :lnext<cr>
+nnoremap <leader>lf :lfirst<cr>
+nnoremap <leader>ll :llast<cr>
+nnoremap <leader>lC :lclose<cr>
+nnoremap <leader>le :lex[]<cr>
 " -v-2 http://vimcasts.org/episodes/the-edit-command/
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>ew :e %%

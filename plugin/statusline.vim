@@ -12,10 +12,17 @@ set statusline+=%<                             " Right justify
 set statusline+=%m%t                              " Filename and evt modified
 
 " Puts in the current git status
-if count(g:pathogen_disabled, 'Fugitive') < 1   
+if exists('g:loaded_fugitive')
   set statusline+=%2*
-  set statusline+=%{fugitive#statusline()}
+  set statusline+=\ %{fugitive#statusline()}
   set statusline+=%1*
+endif
+
+" Puts in the current git status
+if exists('g:loaded_syntastic_plugin')
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
 endif
 
 set statusline+=\ %y                             " Type of file in buffer

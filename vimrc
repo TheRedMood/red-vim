@@ -1,19 +1,22 @@
 " 'You can pry my vimrc out of my cold, dead fingers' - Peepcode
 " This mosaic of a vimrc was pieced together by:
 "   Teodor Spæren (TheRedMood) <teodor_spaeren@riseup.net>
-
 " -v-1  Startup 
 set nocompatible                            " No vi-compatibility
+set cpoptions+=$                            " Show $ at the end of changes
 filetype off
+
+let $PATH = $PATH . ':' . expand("~/.cabal/bin")
 " -^-1
 " -v-1 Pathogen
   " Disable plugins -v-2
     " call add(g:pathogen_disabled, '<bundle folder name>')
-    let g:pathogen_disabled = ['ctrlp.vim', 'vim-git-log']
+    let g:pathogen_disabled = []
   " -^-2 
 call pathogen#infect()
 call pathogen#helptags()
 filetype plugin indent on
+
 " -^-1
 " -v-1 Moving around, searching and patterns
 set incsearch                               " Show match for partly typed search command
@@ -102,6 +105,16 @@ set encoding=utf-8                          " Character encoding used in Vim
 set gdefault                                " Use the 'g'lobal flag for :substitute
 set viminfo+=n~/.vim/.viminfo
 
+" syntastic
+let g:syntastic_auto_loc_list=1
+let g:syntastic_disabled_filetypes=['html']
+let g:syntastic_enable_signs=1
+
+" Haskell
+"let g:haddock_browser = ""
+
+" neco-ghc
+let g:necoghc_enable_detailed_browse = 1 
   " -v-2 Remove weird startup kludges
   " http://superuser.com/questions/553601/vim-has-unexpected-key-presses-on-startup-what-could-be-causing-this
     set t_RV= ttymouse=xterm2

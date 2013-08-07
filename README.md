@@ -18,23 +18,33 @@ Then create the symlinks:
 
     $ ln -s ~/.vim/vimrc ~/.vimrc
 
+Some of the plugins require extra setup:
+
+    $ cabal update
+    $ cabal install pandoc
+    $ cabal install ghc-mod
+    $ cabal install hdevtools
+
+Now enjoy your new setup!
+
 ### Plugins
--	[webapi-vim](https://github.com/mattn/webapi-vim)
--	[gist-vim](https://github.com/mattn/gist-vim)
--	[vim-pathogen](https://github.com/tpope/vim-pathogen)
--	[vim-fugitive](https://github.com/tpope/vim-fugitive)
--	[tabular](https://github.com/godlygeek/tabular)
--	[presenting.vim](https://github.com/sotte/presenting.vim)
--	[vim-gnupg](https://github.com/jamessan/vim-gnupg)
--   [vim-git-log](https://github.com/kablamo/vim-git-log.git)
--   [vim-unimparied](https://github.com/tpope/vim-unimpaired.git)
--   [ctrlp.vim](https://github.com/kien/ctrlp.vim.git)
--   [vim-markdown](https://github.com/tpope/vim-markdown.git)
--   [vim-markdown-folding](https://github.com/nelstrom/vim-markdown-folding.git)
--   [xterm-color-table.vim](https://github.com/guns/xterm-color-table.vim.git)
--   [ag.vim](https://github.com/rking/ag.vim.git)
+- [ag.vim](https://github.com/rking/ag.vim.git)
+- [gist-vim](https://github.com/mattn/gist-vim)
+- [haskell.vim](https://github.com/vim-scripts/haskell.vim.git)
+- [neco-ghc](https://github.com/ujihisa/neco-ghc.git)
+- [syntastic]( https://github.com/scrooloose/syntastic.git)
+- [tabular](https://github.com/godlygeek/tabular)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [vim-git](https://github.com/tpope/vim-git.git)
+- [vim-gnupg](https://github.com/jamessan/vim-gnupg)
+- [vim-hdevtools](https://github.com/bitc/vim-hdevtools.git)
+- [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc.git)
+- [vim-pathogen](https://github.com/tpope/vim-pathogen)
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator.git)
+- [webapi-vim](https://github.com/mattn/webapi-vim)
+
 ### Thanks
--	[n2o4](https://github.com/n2o4)
--	[harski](https://github.com/harski)
--   [Vimcasts](http://vimcasts.org/)
--	People I stole from in some way <3
+- [n2o4](https://github.com/n2o4)
+- [harski](https://github.com/harski)
+- [Vimcasts](http://vimcasts.org/)
+- People I stole from in some way <3
